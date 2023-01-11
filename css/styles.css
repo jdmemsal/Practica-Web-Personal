@@ -1,0 +1,267 @@
+body{
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* HEADER */
+header .nav{
+    min-height: 80px;
+    overflow: hidden;
+    background: #fff;
+}
+
+/* div logotipo, nav izquierda */
+header .logo h2,
+header .logo p {
+    font-size: 16px;
+    display: inline-block;
+}
+header .logo .icono{
+    color: #bfbfbf;
+}
+/* punto · icono logotipo, nav izquierda */
+header .logo svg{
+    width: 20px;
+    height: 20px;
+}
+/* color junto al nombre en logotipo, nav izquierda */
+header .logo p{
+    color: #777;
+}
+
+header .menu .color1{ background: #3da5e2; }
+header .menu .color2{ background: #005385; }
+header .menu .color3{ background: #003855; }
+
+header .menu .color1:hover{background: #1ba0ef; }
+header .menu .color2:hover{background: #00426a; }
+header .menu .color3:hover{background: #002d44; }
+
+
+
+/* MAIN */
+
+/*portfolio*/
+.portfolio{
+    border-top: 5px solid #3da5e2;
+    background: #fff;
+}
+
+.portfolio .titulo{
+    color: #005385;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.portfolio .galeria .contenedor-imagen{
+    max-height: 180px;
+    overflow: hidden;
+}
+
+.portfolio .galeria .contenedor-imagen a{
+    background: #3da5e2;
+    display: inline-block;
+}
+
+.portfolio .galeria .contenedor-imagen:hover img{
+    opacity: .3;
+}
+
+/* Ventana modal, aumentar de tamaño las imagenes de la web */
+.modal-dialog {
+    max-width: 1000px;
+}
+
+/* Acerca de */
+.acerca-de .foto .nombre{
+    color: #545454;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.acerca-de .titulo .info{
+    color: #005385;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.acerca-de .info .resumen{
+    letter-spacing: 1px;
+}
+
+.acerca-de .info .label{
+    font-size: 18px;
+    font-weight: 600;
+    color: #005385;
+    margin-bottom: 10px;
+}
+
+.acerca-de .info .progress{
+    background: #005385;
+    border-radius: 0;
+    height: 25px;
+}
+
+.acerca-de .info .progress .progress-bar{
+    background: #3da5e2;
+    line-height: 25px;
+    padding-left: 20px;
+}
+
+
+/* Contacto */
+.contacto{
+    border-top: 1px solid #cbcbcb;
+    border-bottom: 1px solid #cbcbcb;;
+}
+
+.contacto .titulo{
+    color: #003855;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contacto .formulario input[type="text"],
+.contacto .formulario input[type="email"],
+.contacto .formulario textarea{
+    padding: 15px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contacto .formulario textarea{
+    height: 150px;
+    min-height: 150px;
+    max-height: 250px;
+}
+
+.contacto .formulario .boton{
+    background: #3da5e2;
+    border: none;
+    padding: 7px 30px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    width: auto;
+    border-radius: 3px;
+}
+
+.contacto .formulario .boton:hover{
+    background: #1ba0ef;
+}
+
+
+/* Dispositivos menores a lg */
+@media screen and (max-width: 992px){
+    .logo {
+        height: 76px;
+    }
+
+    header .menu{
+        min-height: 76px;
+    }
+
+    header.menu a{
+        width: 100%;
+    }
+
+    /*nth-child(1) - por ejemplo - sera la primera imagen del contenedor
+    basicamente vamos por todas nuestras imagenes y les asignamos un orden
+    que se aplicara en el mediaquery de dispositivos lg*/
+    .portfolio .galeria .contenedor-imagen:nth-child(1){order: 1;}
+    .portfolio .galeria .contenedor-imagen:nth-child(2){order: 2;}
+    .portfolio .galeria .contenedor-imagen:nth-child(3){order: 3;}
+    .portfolio .galeria .contenedor-imagen:nth-child(4){order: 8;}
+    .portfolio .galeria .contenedor-imagen:nth-child(5){order: 7;}
+    .portfolio .galeria .contenedor-imagen:nth-child(6){order: 5;}
+    .portfolio .galeria .contenedor-imagen:nth-child(7){order: 4;}
+    .portfolio .galeria .contenedor-imagen:nth-child(8){order: 6;}
+    .portfolio .galeria .contenedor-imagen:nth-child(9){order: 9;}
+    .portfolio .galeria .contenedor-imagen:nth-child(10){order: 10;}
+}
+
+/* dispositivos menores a sm */
+@media screen and (max-width: 576px){
+    .logo {
+        height: 76px;
+    }
+
+    header .menu{
+        min-height: 76px;
+    }
+
+    header.menu a{
+        width: 100%;
+    }
+
+    .portfolio .galeria .contenedor-imagen:nth-child(1){order: 1;}
+    .portfolio .galeria .contenedor-imagen:nth-child(2){order: 2;}
+    .portfolio .galeria .contenedor-imagen:nth-child(3){order: 3;}
+    .portfolio .galeria .contenedor-imagen:nth-child(4){order: 5;}
+    .portfolio .galeria .contenedor-imagen:nth-child(5){order: 4;}
+    .portfolio .galeria .contenedor-imagen:nth-child(6){order: 7;}
+    .portfolio .galeria .contenedor-imagen:nth-child(7){order: 6;}
+    .portfolio .galeria .contenedor-imagen:nth-child(8){order: 8;}
+    .portfolio .galeria .contenedor-imagen:nth-child(9){order: 9;}
+    .portfolio .galeria .contenedor-imagen:nth-child(10){order: 10;}
+
+    .redes-sociales .icono{
+        width: 50px;
+        height: 50px;
+    }
+    .redes-sociales .icono svg{
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+/* Footer iconos */
+.redes-sociales{
+    padding: 40px 0;
+    margin-bottom: 40px;
+}
+
+.redes-sociales .icono{
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    background: #cbcbcb;
+    display: inline-block;
+    margin: 0px, 20px;
+    text-decoration: none;
+    border-radius: 100px;
+    transition: all .3s ease;
+}
+
+.redes-sociales .icono svg{
+    width: 40px;
+    height: 40px;
+}
+
+.redes-sociales .linkedIn{
+    background: #0E76A8;
+}
+
+.redes-sociales .infojobs{
+    background: #0E76A8;
+}
+
+.redes-sociales .github{
+    background: #000;
+}
+
+.formulario__confirmado{
+    background-color: rgb(74,185,0);
+    text-align: center;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    color: white;
+    text-transform: uppercase;
+}
